@@ -1,0 +1,61 @@
+/* Добавьте эти стили в существующий App.css */
+
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  color: #6b7280;
+}
+
+.empty-state h3 {
+  margin-bottom: 8px;
+  color: #374151;
+}
+
+.highlight-pulse {
+  animation: highlightPulse 2s ease;
+}
+
+@keyframes highlightPulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); box-shadow: 0 0 20px rgba(59, 130, 246, 0.5); }
+  100% { transform: scale(1); }
+}
+
+/* Дополнительные стили для ProgressHeader */
+.progress-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.progress-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.status-badge {
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  width: fit-content;
+}
+
+.status-badge--not-started {
+  background-color: #ff6b6b;
+  color: white;
+}
+
+.status-badge--in-progress {
+  background-color: #4ecdc4;
+  color: white;
+}
+
+.status-badge--completed {
+  background-color: #45b7d1;
+  color: white;
+}
